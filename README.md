@@ -30,3 +30,6 @@ I develop this project in my free time, feel free to clone the repo and contribu
 At the time all the output from the bot is in text format.\
 ![alt text](https://i.gyazo.com/e088311ede70cc8c7b7b85f6a51bc8f2.png)\
 I'm currently working on a <b>card/image</b> presentation for the stats.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
