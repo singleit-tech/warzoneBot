@@ -1,0 +1,489 @@
+{
+    "br_brsolos" : [
+        {
+            "metal" : "BRONZE",
+            "number" : 4,
+            "lowerBound": 0.52,
+            "upperBound": 0.578
+        }, 
+        {
+            "metal": "BRONZE",
+            "number": 3,
+            "lowerBound": 0.578,
+            "upperBound": 0.619
+        }, 
+        {
+            "metal": "BRONZE",
+            "number": 2,
+            "lowerBound": 0.619,
+            "upperBound": 0.671
+        }, 
+        {
+            "metal": "BRONZE",
+            "number": 1,
+            "lowerBound": 0.671,
+            "upperBound": 0.743
+        }, 
+        {
+            "metal": "SILVER",
+            "number": 4,
+            "lowerBound": 0.743,
+            "upperBound": 0.792
+        }, 
+        {
+            "metal": "SILVER",
+            "number": 3,
+            "lowerBound": 0.792,
+            "upperBound": 0.822
+        }, 
+        {
+            "metal": "SILVER",
+            "number": 2,
+            "lowerBound": 0.822,
+            "upperBound": 0.845
+        }, 
+        {
+            "metal": "SILVER",
+            "number": 1,
+            "lowerBound": 0.845,
+            "upperBound": 0.865
+        }, {
+            "metal": "GOLD",
+            "number": 4,
+            "lowerBound": 0.865,
+            "upperBound": 0.884
+        }, 
+        {
+            "metal": "GOLD",
+            "number": 3,
+            "lowerBound": 0.884,
+            "upperBound": 0.907
+        }, 
+        {
+            "metal": "GOLD",
+            "number": 2,
+            "lowerBound": 0.907,
+            "upperBound": 0.936
+        }, 
+        {
+            "metal": "GOLD",
+            "number": 1,
+            "lowerBound": 0.936,
+            "upperBound": 0.974
+        }, 
+        {
+            "metal": "PLATINUM",
+            "number": 4,
+            "lowerBound": 0.974,
+            "upperBound": 1.012
+        }, 
+        {
+            "metal": "PLATINUM",
+            "number": 3,
+            "lowerBound": 1.012,
+            "upperBound": 1.04
+        }, 
+        {
+            "metal": "PLATINUM",
+            "number": 2,
+            "lowerBound": 1.04,
+            "upperBound": 1.06
+        }, 
+        {
+            "metal": "PLATINUM",
+            "number": 1,
+            "lowerBound": 1.06,
+            "upperBound": 1.078
+        }, 
+        {
+            "metal": "DIAMOND",
+            "number": 4,
+            "lowerBound": 1.078,
+            "upperBound": 1.095
+        }, 
+        {
+            "metal": "DIAMOND",
+            "number": 3,
+            "lowerBound": 1.095,
+            "upperBound": 1.113
+        }, 
+        {
+            "metal": "DIAMOND",
+            "number": 2,
+            "lowerBound": 1.113,
+            "upperBound": 1.14
+        }, 
+        {
+            "metal": "DIAMOND",
+            "number": 1,
+            "lowerBound": 1.14,
+            "upperBound": 1.19
+        }
+    ],
+
+    "br_brduos" : [
+        {
+            "metal" : "BRONZE",
+            "number" : 4,
+            "lowerBound": 0.61,
+            "upperBound": 0.684
+        }, 
+        {
+            "metal": "BRONZE",
+            "number": 3,
+            "lowerBound": 0.684,
+            "upperBound": 0.754
+        }, 
+        {
+            "metal": "BRONZE",
+            "number": 2,
+            "lowerBound": 0.754,
+            "upperBound": 0.808
+        }, 
+        {
+            "metal": "BRONZE",
+            "number": 1,
+            "lowerBound": 0.808,
+            "upperBound": 0.849
+        }, 
+        {
+            "metal": "SILVER",
+            "number": 4,
+            "lowerBound": 0.849,
+            "upperBound": 0.879
+        }, 
+        {
+            "metal": "SILVER",
+            "number": 3,
+            "lowerBound": 0.879,
+            "upperBound": 0.905
+        }, 
+        {
+            "metal": "SILVER",
+            "number": 2,
+            "lowerBound": 0.905,
+            "upperBound": 0.929
+        }, 
+        {
+            "metal": "SILVER",
+            "number": 1,
+            "lowerBound": 0.929,
+            "upperBound": 0.951
+        }, {
+            "metal": "GOLD",
+            "number": 4,
+            "lowerBound": 0.951,
+            "upperBound": 0.974
+        }, 
+        {
+            "metal": "GOLD",
+            "number": 3,
+            "lowerBound": 0.974,
+            "upperBound": 0.998
+        }, 
+        {
+            "metal": "GOLD",
+            "number": 2,
+            "lowerBound": 0.998,
+            "upperBound": 1.025
+        }, 
+        {
+            "metal": "GOLD",
+            "number": 1,
+            "lowerBound": 1.025,
+            "upperBound": 1.054
+        }, 
+        {
+            "metal": "PLATINUM",
+            "number": 4,
+            "lowerBound": 1.054,
+            "upperBound": 1.086
+        }, 
+        {
+            "metal": "PLATINUM",
+            "number": 3,
+            "lowerBound": 1.086,
+            "upperBound": 1.118
+        }, 
+        {
+            "metal": "PLATINUM",
+            "number": 2,
+            "lowerBound": 1.118,
+            "upperBound": 1.146
+        }, 
+        {
+            "metal": "PLATINUM",
+            "number": 1,
+            "lowerBound": 1.146,
+            "upperBound": 1.171
+        }, 
+        {
+            "metal": "DIAMOND",
+            "number": 4,
+            "lowerBound": 1.171,
+            "upperBound": 1.194
+        }, 
+        {
+            "metal": "DIAMOND",
+            "number": 3,
+            "lowerBound": 1.194,
+            "upperBound": 1.22
+        }, 
+        {
+            "metal": "DIAMOND",
+            "number": 2,
+            "lowerBound": 1.22,
+            "upperBound": 1.253
+        }, 
+        {
+            "metal": "DIAMOND",
+            "number": 1,
+            "lowerBound": 1.253,
+            "upperBound": 1.29
+        }
+    ],
+    "br_brtrios" : [
+        {
+            "metal": "BRONZE",
+            "number": 4,
+            "lowerBound": 0.66,
+            "upperBound": 0.724
+          },
+          {
+            "metal": "BRONZE",
+            "number": 3,
+            "lowerBound": 0.724,
+            "upperBound": 0.784
+          },
+          {
+            "metal": "BRONZE",
+            "number": 2,
+            "lowerBound": 0.784,
+            "upperBound": 0.828
+          },
+          {
+            "metal": "BRONZE",
+            "number": 1,
+            "lowerBound": 0.828,
+            "upperBound": 0.863
+          },
+          {
+            "metal": "SILVER",
+            "number": 4,
+            "lowerBound": 0.863,
+            "upperBound": 0.892
+          },
+          {
+            "metal": "SILVER",
+            "number": 3,
+            "lowerBound": 0.892,
+            "upperBound": 0.918
+          },
+          {
+            "metal": "SILVER",
+            "number": 2,
+            "lowerBound": 0.918,
+            "upperBound": 0.94
+          },
+          {
+            "metal": "SILVER",
+            "number": 1,
+            "lowerBound": 0.94,
+            "upperBound": 0.962
+          },
+          {
+            "metal": "GOLD",
+            "number": 4,
+            "lowerBound": 0.962,
+            "upperBound": 0.982
+          },
+          {
+            "metal": "GOLD",
+            "number": 3,
+            "lowerBound": 0.982,
+            "upperBound": 1.004
+          },
+          {
+            "metal": "GOLD",
+            "number": 2,
+            "lowerBound": 1.004,
+            "upperBound": 1.026
+          },
+          {
+            "metal": "GOLD",
+            "number": 1,
+            "lowerBound": 1.026,
+            "upperBound": 1.048
+          },
+          {
+            "metal": "PLATINUM",
+            "number": 4,
+            "lowerBound": 1.048,
+            "upperBound": 1.074
+          },
+          {
+            "metal": "PLATINUM",
+            "number": 3,
+            "lowerBound": 1.074,
+            "upperBound": 1.102
+          },
+          {
+            "metal": "PLATINUM",
+            "number": 2,
+            "lowerBound": 1.102,
+            "upperBound": 1.131
+          },
+          {
+            "metal": "PLATINUM",
+            "number": 1,
+            "lowerBound": 1.131,
+            "upperBound": 1.16
+          },
+          {
+            "metal": "DIAMOND",
+            "number": 4,
+            "lowerBound": 1.16,
+            "upperBound": 1.187
+          },
+          {
+            "metal": "DIAMOND",
+            "number": 3,
+            "lowerBound": 1.187,
+            "upperBound": 1.217
+          },
+          {
+            "metal": "DIAMOND",
+            "number": 2,
+            "lowerBound": 1.217,
+            "upperBound": 1.254
+          },
+          {
+            "metal": "DIAMOND",
+            "number": 1,
+            "lowerBound": 1.254,
+            "upperBound": 1.29
+          }
+    ],
+    "br_brquads" : [
+        {
+            "metal": "BRONZE",
+            "number": 4,
+            "lowerBound": 0.62,
+            "upperBound": 0.693
+          },
+          {
+            "metal": "BRONZE",
+            "number": 3,
+            "lowerBound": 0.693,
+            "upperBound": 0.763
+          },
+          {
+            "metal": "BRONZE",
+            "number": 2,
+            "lowerBound": 0.763,
+            "upperBound": 0.808
+          },
+          {
+            "metal": "BRONZE",
+            "number": 1,
+            "lowerBound": 0.808,
+            "upperBound": 0.843
+          },
+          {
+            "metal": "SILVER",
+            "number": 4,
+            "lowerBound": 0.843,
+            "upperBound": 0.872
+          },
+          {
+            "metal": "SILVER",
+            "number": 3,
+            "lowerBound": 0.872,
+            "upperBound": 0.898
+          },
+          {
+            "metal": "SILVER",
+            "number": 2,
+            "lowerBound": 0.898,
+            "upperBound": 0.922
+          },
+          {
+            "metal": "SILVER",
+            "number": 1,
+            "lowerBound": 0.922,
+            "upperBound": 0.943
+          },
+          {
+            "metal": "GOLD",
+            "number": 4,
+            "lowerBound": 0.943,
+            "upperBound": 0.964
+          },
+          {
+            "metal": "GOLD",
+            "number": 3,
+            "lowerBound": 0.964,
+            "upperBound": 0.984
+          },
+          {
+            "metal": "GOLD",
+            "number": 2,
+            "lowerBound": 0.984,
+            "upperBound": 1.005
+          },
+          {
+            "metal": "GOLD",
+            "number": 1,
+            "lowerBound": 1.005,
+            "upperBound": 1.026
+          },
+          {
+            "metal": "PLATINUM",
+            "number": 4,
+            "lowerBound": 1.026,
+            "upperBound": 1.048
+          },
+          {
+            "metal": "PLATINUM",
+            "number": 3,
+            "lowerBound": 1.048,
+            "upperBound": 1.072
+          },
+          {
+            "metal": "PLATINUM",
+            "number": 2,
+            "lowerBound": 1.072,
+            "upperBound": 1.096
+          },
+          {
+            "metal": "PLATINUM",
+            "number": 1,
+            "lowerBound": 1.096,
+            "upperBound": 1.123
+          },
+          {
+            "metal": "DIAMOND",
+            "number": 4,
+            "lowerBound": 1.123,
+            "upperBound": 1.153
+          },
+          {
+            "metal": "DIAMOND",
+            "number": 3,
+            "lowerBound": 1.153,
+            "upperBound": 1.185
+          },
+          {
+            "metal": "DIAMOND",
+            "number": 2,
+            "lowerBound": 1.185,
+            "upperBound": 1.23
+          },
+          {
+            "metal": "DIAMOND",
+            "number": 1,
+            "lowerBound": 1.23,
+            "upperBound": 1.28
+          }
+    ]
+}
