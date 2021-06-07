@@ -1,0 +1,5 @@
+env/
+.env
+__pycache__/
+fonts/
+api/canvas_manipulation.py

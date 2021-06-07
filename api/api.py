@@ -1,15 +1,15 @@
 import requests
 import json
 import os
+
+from requests.api import request
 from dotenv import load_dotenv
 from .team_builder import Team
 import traceback
 
 
 USER_DICT = {
-        "roguezn" : "ROGUEZN#2376",
-        "rimaal" : "MATEUS#2434",
-        "singleit" : "SINGLE#21357"
+        "discord_user" : "battle.net_tag"
     }
 class Api:
     
@@ -21,8 +21,8 @@ class Api:
         try:
             user = USER_DICT[str(self.user).lower()]
             stats_url = 'https://app.wzstats.gg/v2/player?username={}&platform=battle'.format(user.replace('#', '%23'))
-            print(stats_url)
-            response = requests.request("GET", stats_url)
+            #print(stats_url)
+            response = self.get(stats_url)
             response_json = response.json()
             response_dict = {
                 "username" : response_json['data']['uno'],
@@ -35,7 +35,7 @@ class Api:
                 "scorePerMinute" : response_json['data']['lifetime']['mode']['br']['properties']['scorePerMinute'],
                 "gamesPlayed" : response_json['data']['lifetime']['mode']['br']['properties']['gamesPlayed']
             }
-            print(response_dict)
+            #print(response_dict)
             return response_dict
         except Exception as e:
             traceback.print_exc()
@@ -46,9 +46,9 @@ class Api:
         try:
             user = USER_DICT[str(self.user).lower()]
             match_url = 'https://app.wzstats.gg/v2/player/match?username={}&platform=battle'.format(user.replace('#', '%23'))
-            response = requests.request("GET", match_url)
+            response = self.get(match_url)
             response_json = response.json()
-            print(response_json[0])
+            #print(response_json[0])
             if("mode" in response_json[0].keys()):
                 mode = response_json[0]['mode']
                 avg = response_json[0]['matchStatData']['playerAverage']
@@ -83,13 +83,13 @@ class Api:
         try:
             user = USER_DICT[str(self.user).lower()]
             match_url = 'https://app.wzstats.gg/v2/player/match?username={}&platform=battle'.format(user.replace('#', '%23'))
-            response = requests.request("GET", match_url)
+            response = self.get(match_url)
             match_id = response.json()[0]['id']
             if(response.json()[0]['mode'] == "br_brsolos"):
                 response_dict = {"message" : "br_brsolos"}
             else:
                 stats_url = 'https://app.wzstats.gg/v2/?matchId={}&player={}'.format(match_id, user.replace('#', '%23'))
-                stats = requests.request("GET", stats_url)
+                stats = self.get(stats_url)
                 response_json = stats.json()['data']['players']
                 team = Team(response_json).build(user)
                 
@@ -99,6 +99,8 @@ class Api:
             print("TEAM : {}".format(stats_url))
 
 
+    def get(self, url):
+        return requests.request("GET", url)
 #curl --location --request GET 'https://my.callofduty.com/api/papi-client/stats/cod/v1/title/mw/platform/battle/gamer/iShot%2321899/profile/type/mp'
 
 #email = os.getenv('BATTLE_NET_EMAIL');

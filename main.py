@@ -7,6 +7,9 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 import logging
+import timeit
+from api.canvas_manipulation import Canvas
+import io
 
 intents = discord.Intents.default()
 intents.members = True
@@ -15,26 +18,36 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
+logging.basicConfig(level=logging.INFO, datefmt="%H:%M:%S",
+                      format='[%(levelname)s] %(asctime)s (%(threadName)-9s) (%(processName)-9s) %(message)s')
 @bot.event
 async def on_ready():
-    logging.debug('Logged in as')
-    logging.debug(bot.user.name)
-    logging.debug(bot.user.id)
-    logging.debug('------')
+    logging.info('Logged in as')
+    logging.info(bot.user.name)
+    logging.info(bot.user.id)
+    logging.info('------')
 
 @bot.command(name="stats", help="User this command to check your WZ stats with '!stats me'\
     or check on other users from this server with '!stats <username>")
 async def stats(ctx):
     try:
+        start_time = timeit.default_timer()
         user = ctx.message.content.split(" ")[1]
 
         if(user == "me"):
             user = ctx.author.name
 
         response = Api(user).get_player_stats();
-        if("error" in response.keys()):
+        #stats_card = Canvas.user_canvas(response)
+        #f = io.BytesIO()
+        #stats_card.save(f, format='PNG')
+        end_time = timeit.default_timer() - start_time
+        logging.info(f'Elapsed Time : {end_time} seconds')
+        if("error" in response):
             await ctx.send("```diff\n- {}```".format(response['error']))
         else:
+           # f.seek(0)
+           # await ctx.send(file=discord.File(f, "stats.png"))
             await ctx.send("**{}**'s stats:\n"
                     "\t> **Level** : {}\n\t> **Wins** : {}\n"
                     "\t> **Kills** : {}\n\t> **Deaths** : {}\n\t> **K/D Ratio** : {:.2f}\n"
@@ -53,7 +66,7 @@ async def stats(ctx):
 @bot.command(name="lm")
 async def last_match(ctx):
     try:
-        
+        start_time = timeit.default_timer()
         user = ctx.author.name
         if(" " in ctx.message.content):
             args = ctx.message.content.split(" ")[1]
@@ -62,6 +75,8 @@ async def last_match(ctx):
         if(args == "me" or args == ""):
             gulag="N/A"
             response = Api(user).get_last_match()
+            end_time = timeit.default_timer() - start_time
+            logging.info(f'Elapsed Time : {end_time} seconds')
             if(response['gulag'] is not None):
                     if(response['gulag'] == True):
                         gulag = "Win"
@@ -80,6 +95,8 @@ async def last_match(ctx):
                                                         response['kills'], response['deaths'],response['damage'],gulag))
         elif(args == "team"):
             response = Api(user).get_last_team_match()
+            end_time = timeit.default_timer() - start_time
+            logging.info(f'Elapsed Time : {end_time} seconds')
             leaderboard = ""
             gulag = "N/A"
             players = response['players'];
