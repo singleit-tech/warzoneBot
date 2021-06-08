@@ -15,7 +15,12 @@ intents = discord.Intents.default()
 intents.members = True
 load_dotenv()
 
-TOKEN = os.getenv('DISCORD_TOKEN') ### You'll need to create a .env file to store your discord Token
+"""
+    You have 2 options
+     1. You'll need to create a .env file to store your discord Token
+     2. You can simply paste the TOKEN string instead of os.getenv('DISCORD_TOKEN') 
+"""
+TOKEN = os.getenv('DISCORD_TOKEN') 
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
