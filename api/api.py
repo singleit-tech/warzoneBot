@@ -9,8 +9,6 @@ import traceback
 
 
 USER_DICT = {
-        "roguezn" : "ROGUEZN#2376",
-        "rimaal" : "MATEUS#2434",
         "singleit" : "SINGLE#21357"
     }
 class Api:
