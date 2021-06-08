@@ -14,12 +14,15 @@ import io
 intents = discord.Intents.default()
 intents.members = True
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+
+TOKEN = os.getenv('DISCORD_TOKEN') ### You'll need to create a .env file to store your discord Token
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
+### LOGGING CONFIG JUST TO CHECK ON SOEM OUTPUT
 logging.basicConfig(level=logging.INFO, datefmt="%H:%M:%S",
                       format='[%(levelname)s] %(asctime)s (%(threadName)-9s) (%(processName)-9s) %(message)s')
+
 @bot.event
 async def on_ready():
     logging.info('Logged in as')
