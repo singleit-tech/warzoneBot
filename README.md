@@ -28,14 +28,14 @@ Windows
  ```
 ### Deploying on Docker
  ```cmd
-git clone https://github.com/singleit-tech/warzoneBot.git
+git clone https://github.com/singleit-tech/warzoneBot.git && cd warzoneBot
  ```
-  ```cmd
-cd warzoneBot && docker build -t warzone-bot:latest .
- ```
-  ```cmd
+```cmd
+docker build -t warzone-bot:latest .
+```
+```cmd
 docker run -d warzone-not:latest
- ```
+```
 ## Development
 
 I develop this project in my free time, feel free to clone the repo and contribute.\
