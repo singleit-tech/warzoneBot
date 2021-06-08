@@ -1,11 +1,11 @@
 # warzoneBot
-Bot to display COD:Warzone stats from WZStats.gg\
+Minimal Python Bot to display Call Of Duty Warzone stats from WZStats.gg\
 At the moment the bot is <b>not publicly available</b>.
 
 ## Getting Started
 
-You can clone the repo and use it for your own at your will.
-Both Linux and Windows
+You can clone or fork the repo and contibute or use it in your own discord channel.
+For both Linux and Windows
  ```cmd
 git clone https://github.com/singleit-tech/warzoneBot.git
  ```
