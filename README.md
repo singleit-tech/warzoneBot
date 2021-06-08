@@ -4,6 +4,8 @@ At the moment the bot is <b>not publicly available</b>.
 
 ## Getting Started
 
+### Manually
+
 You can clone or fork the repo and contibute or use it in your own discord channel.
 For both Linux and Windows
  ```cmd
@@ -23,6 +25,16 @@ Windows
  python3 -m pip install venv env
  python3 -m pip install -r requirements.txt
  source env\bin\activate
+ ```
+### Deploying on Docker
+ ```cmd
+git clone https://github.com/singleit-tech/warzoneBot.git
+ ```
+  ```cmd
+cd warzoneBot && docker build -t warzone-bot:latest .
+ ```
+  ```cmd
+docker run -d warzone-not:latest
  ```
 ## Development
 
