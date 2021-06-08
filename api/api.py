@@ -9,7 +9,9 @@ import traceback
 
 
 USER_DICT = {
-        "discord_user" : "battle.net_tag"
+        "roguezn" : "ROGUEZN#2376",
+        "rimaal" : "MATEUS#2434",
+        "singleit" : "SINGLE#21357"
     }
 class Api:
     
@@ -21,7 +23,7 @@ class Api:
         try:
             user = USER_DICT[str(self.user).lower()]
             stats_url = 'https://app.wzstats.gg/v2/player?username={}&platform=battle'.format(user.replace('#', '%23'))
-            #print(stats_url)
+            print(stats_url)
             response = self.get(stats_url)
             response_json = response.json()
             response_dict = {
