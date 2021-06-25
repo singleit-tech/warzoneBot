@@ -34,7 +34,7 @@ git clone https://github.com/singleit-tech/warzoneBot.git && cd warzoneBot
 docker build -t warzone-bot:latest .
 ```
 ```cmd
-docker run -d warzone-not:latest
+docker run -d warzone-bot:latest
 ```
 ## Development
 
