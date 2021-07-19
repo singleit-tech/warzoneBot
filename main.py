@@ -35,11 +35,10 @@ async def on_ready():
     logging.info(bot.user.id)
     logging.info('------')
 
-@bot.command(name="stats", help="User this command to check your WZ stats with '!stats me'\
-    or check on other users from this server with '!stats <username>")
+@bot.command(name="stats", help="Shows lifetime stats '!stats me' or '!stats <username>")
 async def stats(ctx):
     try:
-        start_time = timeit.default_timer()
+        
         user = ctx.message.content.split(" ")[1]
 
         if(user == "me"):
@@ -49,29 +48,28 @@ async def stats(ctx):
         #stats_card = Canvas.user_canvas(response)
         #f = io.BytesIO()
         #stats_card.save(f, format='PNG')
-        end_time = timeit.default_timer() - start_time
-        logging.info(f'Elapsed Time : {end_time} seconds')
-        if("error" in response):
+        
+        if(response.username is None):
             await ctx.send("```diff\n- {}```".format(response['error']))
         else:
-           # f.seek(0)
-           # await ctx.send(file=discord.File(f, "stats.png"))
+            #f.seek(0)
+            #await ctx.send(file=discord.File(f, "stats.png"))
             await ctx.send("**{}**'s stats:\n"
                     "\t> **Level** : {}\n\t> **Wins** : {}\n"
                     "\t> **Kills** : {}\n\t> **Deaths** : {}\n\t> **K/D Ratio** : {:.2f}\n"
                     "\t> **Score Per Minute** : {:.2f}\n"
                     "\t> **Games Played** : {}\n"
-                    "\t> **Placed Top 10** : {} times".format(response['username'], response['level'],
-                                                    response['wins'], response['kills'],
-                                                    response['deaths'], response['kdRatio'],
-                                                    response['scorePerMinute'], response['gamesPlayed'],
-                                                    response['topTen']))
+                    "\t> **Placed Top 10** : {} times".format(response.username, response.level,
+                                                    response.wins, response.kills,
+                                                    response.deaths, response.kdr,
+                                                    response.spm, response.gp,
+                                                    response.topTen))
     except Exception :
         help="Use this command to check your WZ stats with ```!stats me``` or check on other users from this server with ```!stats <username>```"
         traceback.print_exc()
         await ctx.send(help) 
 
-@bot.command(name="lm")
+@bot.command(name="lm", help="Shows last match stats '!lm' or '!lm team'")
 async def last_match(ctx):
     try:
         start_time = timeit.default_timer()
@@ -133,7 +131,6 @@ async def last_match(ctx):
     except Exception as e:
         traceback.print_exc()
         await ctx.send("An Error Occurred retrieving match data")
-
 
 
 bot.run(TOKEN)
